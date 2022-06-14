@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <script src="index.bundle.js"></script>
+</head>
+<body class="m-2">
+    <header>
+      <h1 class="flex-column">Leaderboard</h1>
+    </header>
+      
+    <main class="d-flex justify-content-around p-2">
+
+      <section class="card flex-column">
+        <div class="d-flex justify-content-between">
+          <h2>Recent scores</h2>
+          <button type="button" class="btn mx-2 p-1">Refresh</button>
+        </div>
+        <div class="py-1">
+          <ul class="leaderboard">
+           
+          </ul>
+        </div>
+      </section>
+        
+      <section class="d-flex flex-column mx-2">
+        <div>
+          <h2>Add your score</h2>
+        </div>
+        <div class="py-1">
+          <form>
+            <div>
+              <label for="username">
+                <input class="p-1" type="text" name="username" id="username" placeholder="Your name" />
+              </label>
+            </div>
+            <div class="py-1">
+              <label for="score">
+                <input class="p-1" type="text" name="score" id="score" placeholder="Your score" />
+              </label>
+            </div>
+            <div class="d-flex justify-content-end py-1">
+              <input class="btn p-1" type="submit" name="submit" id="submit" />
+            </div>
+          </form>
+        </div>
+
+      </section>
+    </main>
+</body>
+</html>
