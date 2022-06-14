@@ -11,6 +11,10 @@
 - CSS
 - JavaScript
 
+## Live Demo
+
+[Live Demo Link](https://felix45.github.io/leaderboard/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
