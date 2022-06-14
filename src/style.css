@@ -1,3 +1,79 @@
-body {
-  background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --gray: #ddd;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+.d-flex,
+.flex-column {
+  display: flex;
+}
+
+.card {
+  width: 100%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--white);
+}
+
+.m-2 {
+  margin: 2em;
+}
+
+.mx-2 {
+  margin: 0 0 0 2em;
+}
+
+.p-1 {
+  padding: 5px 10px;
+}
+
+.p-2 {
+  padding: 2em;
+}
+
+.py-1 {
+  padding: 1em 0 0 0;
+}
+
+ul {
+  border: 1px solid #000;
+}
+
+ul li {
+  padding: 5px 10px;
+}
+
+ul li:nth-of-type(2n) {
+  background-color: var(--gray);
+}
+
+@media screen and (min-width: 767px) {
+  .card {
+    width: 50%;
+  }
 }
