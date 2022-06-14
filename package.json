@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Felix45/awsome-books-v2.git"
+    "url": "git+https://github.com/Felix45/leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Felix45/awsome-books-v2/issues"
+    "url": "https://github.com/Felix45/leaderboard/issues"
   },
-  "homepage": "https://github.com/Felix45/awsome-books-v2#readme",
+  "homepage": "https://github.com/Felix45/leaderboard#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.1",
