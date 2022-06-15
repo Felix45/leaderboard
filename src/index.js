@@ -1,5 +1,5 @@
 import './style.css';
-import { addScore, getScores, displayBoard } from './modules/leaderboard.js';
+import { addScore, getScores } from './modules/leaderboard.js';
 
 const refreshBtn = document.querySelector('.refresh');
 const addForm = document.forms[0];
@@ -10,6 +10,6 @@ refreshBtn.addEventListener('click', getScores);
 
 addForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  addScore(addForm['user'].value, addForm['score'].value);
+  addScore(addForm.user.value, addForm.score.value);
   addForm.reset();
-})
+});
