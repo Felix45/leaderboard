@@ -40,6 +40,16 @@ ol {
   background-color: var(--white);
 }
 
+.alert {
+  color: #155724;
+  margin-top: 10px;
+  background-color: #d4edda;
+}
+
+.d-none {
+  display: none;
+}
+
 .m-2 {
   margin: 2em;
 }
