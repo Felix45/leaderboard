@@ -1,6 +1,7 @@
 import { get } from "lodash";
 
 const gameId = '77Dk40FTlaYbEU2kfdMk';
+const alertBox = document.querySelector('.alert');
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
 async function createGame() {
@@ -38,9 +39,15 @@ async function addScore(user, score) {
     },
     body: JSON.stringify({user, score}),
   }).then((response) => response.json())
-  .then((data) => getScores() );
+  .then((data) => {
+    getScores();
+    alertBox.innerHTML = data.result;
+    alertBox.classList.toggle('d-none');
+  });
 
-  return result;
+  setTimeout(() => { 
+    alertBox.classList.toggle('d-none');
+  }, 2000);
 }
 
 
