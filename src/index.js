@@ -1,4 +1,19 @@
 import './style.css';
-import board from './modules/leaderboard.js';
+import { addScore, getScores, displayBoard } from './modules/leaderboard.js';
 
-document.querySelector('.leaderboard').innerHTML = board;
+const refreshBtn = document.querySelector('.refresh');
+const addForm = document.forms[0];
+
+
+
+getScores();
+
+refreshBtn.addEventListener('click', getScores);
+
+addForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  addScore(addForm['user'].value, addForm['score'].value);
+  addForm.reset();
+})
+
+

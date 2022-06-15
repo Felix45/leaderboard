@@ -1,4 +1,5 @@
-const scores = [];
+import { get } from "lodash";
+
 const gameId = '77Dk40FTlaYbEU2kfdMk';
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 
@@ -12,12 +13,21 @@ async function createGame() {
    }).then((response) => response.json()).then((data) => console.log(data));
 }
 
+const displayBoard = (data) => {
+  const board = data.reduce((prev, current) => {
+   prev += `<li>${current.user} : ${current.score}</li>`;
+   return prev;
+  }, '');
+  document.querySelector('.leaderboard').innerHTML = board;
+}
+
 async function getScores() {
   let scoreUrl = url + gameId +'/scores/';
-  const scores = await fetch(scoreUrl).then((response) => response.json());
-  console.log(scores);
+  const scores = await fetch(scoreUrl).then((response) => response.json())
+  .then(data => {
+    displayBoard(data.result)
+  });
 }
-getScores();
 
 async function addScore(user, score) {
   let scoreUrl = url + gameId +'/scores/';
@@ -27,15 +37,11 @@ async function addScore(user, score) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({user, score}),
-  }).then((response) => response.json());
+  }).then((response) => response.json())
+  .then((data) => getScores() );
+
+  return result;
 }
 
-const displayBoard = (scores) => {
-  const board = scores.reduce((prev, current) => {
-    prev += `<li>${current.name} ${current.score}</li>`;
-    return prev;
-  }, '');
-  return board;
-}
 
 export { getScores, addScore, displayBoard };
