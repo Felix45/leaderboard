@@ -27,6 +27,7 @@ class LeaderBoard {
     const scoreUrl = `${this.url + this.gameId}/scores/`;
     await fetch(scoreUrl).then((response) => response.json())
       .then((data) => {
+        data.result.sort( (a, b) => b.score - a.score);
         this.displayBoard(data.result);
       });
   }
