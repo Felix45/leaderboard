@@ -17,7 +17,7 @@ class LeaderBoard {
 
   displayBoard = async (data) => {
     const board = data.reduce((prev, current) => {
-      prev += `<li>${current.user} : ${current.score}</li>`;
+      prev += `<li><span>${current.user}</span> <span>${current.score}</span></li>`;
       return prev;
     }, '');
     document.querySelector('.leaderboard').innerHTML = board;

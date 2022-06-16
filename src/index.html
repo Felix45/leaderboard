@@ -12,12 +12,12 @@
       <h1 class="flex-column">Leaderboard</h1>
     </header>
       
-    <main class="d-flex justify-content-around p-2">
+    <main class="d-flex flex-column flex-column-md justify-content-around p-2 px-md-0">
 
-      <section class="card flex-column">
+      <section class="card flex-column border p-2 mx-2 my-2 order-2 order-md-1">
         <div class="d-flex justify-content-between">
           <h2>Recent scores</h2>
-          <button type="button" class="btn mx-2 p-1 refresh">Refresh</button>
+          <button type="button" class="btn mx-2 p-1 fw-bold refresh">Refresh</button>
         </div>
         <div class="py-1">
           <ul class="leaderboard">
@@ -26,7 +26,7 @@
         </div>
       </section>
         
-      <section class="d-flex flex-column mx-2">
+      <section class="card d-flex flex-column border p-2 mx-md-2  auto-height order-1 order-md-2">
         <div>
           <h2>Add your score</h2>
         </div>
@@ -34,16 +34,16 @@
           <form>
             <div>
               <label for="user">
-                <input class="p-1" type="text" name="user" id="user" placeholder="Your name" required/>
+                <input class="input p-1" type="text" name="user" id="user" placeholder="Your name" required/>
               </label>
             </div>
             <div class="py-1">
               <label for="score">
-                <input class="p-1" type="number" name="score" id="score" placeholder="Your score" required/>
+                <input class="input p-1" type="number" name="score" id="score" placeholder="Your score" required/>
               </label>
             </div>
             <div class="d-flex justify-content-end py-1">
-              <input class="btn p-1" type="submit" name="submit" id="submit" />
+              <input class="btn p-1 fw-bold" type="submit" name="submit" id="submit" />
             </div>
             <div class="alert d-none p-1"></div>
           </form>

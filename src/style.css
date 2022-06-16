@@ -5,8 +5,9 @@
 }
 
 :root {
-  --white: rgb(255, 255, 255);
+  --blue: #182b5c;
   --gray: #ddd;
+  --white: #fff;
 }
 
 ul,
@@ -23,6 +24,10 @@ ol {
   width: 100%;
 }
 
+.fw-bold {
+  font-weight: bold;
+}
+
 .flex-column {
   flex-direction: column;
 }
@@ -37,13 +42,30 @@ ol {
 
 .btn {
   cursor: pointer;
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  box-shadow: 5px 5px 5px var(--gray), -5px -5px 5px var(--gray);
+}
+
+.auto-height {
+  height: fit-content;
+}
+
+.border {
+  border: 5px solid var(--gray);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px var(--gray), -5px -5px 5px var(--gray);
 }
 
 .alert {
   color: #155724;
   margin-top: 10px;
   background-color: #d4edda;
+}
+
+.input {
+  width: 100%;
 }
 
 .d-none {
@@ -58,6 +80,10 @@ ol {
   margin: 0 0 0 2em;
 }
 
+.my-2 {
+  margin: 2em 0 0 0;
+}
+
 .p-1 {
   padding: 5px 10px;
 }
@@ -70,8 +96,21 @@ ol {
   padding: 1em 0 0 0;
 }
 
+.px-md-0 {
+  padding: 2em 0;
+}
+
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
 ul {
-  border: 1px solid #000;
+  border-top: 2px solid var(--gray);
+  border-bottom: 2px solid var(--gray);
 }
 
 ul li {
@@ -82,8 +121,37 @@ ul li:nth-of-type(2n) {
   background-color: var(--gray);
 }
 
+ul li > span {
+  width: 30%;
+  display: inline-block;
+}
+
 @media screen and (min-width: 767px) {
   .card {
     width: 50%;
+  }
+
+  .mx-2 {
+    margin: 0 0 0 2em;
+  }
+
+  .px-md-0 {
+    padding: 2em;
+  }
+
+  .flex-column-md {
+    flex-direction: row;
+  }
+
+  .order-md-1 {
+    order: 1;
+  }
+
+  .order-md-2 {
+    order: 2;
+  }
+
+  .mx-md-2 {
+    margin: 0 0 2em 2em;
   }
 }
