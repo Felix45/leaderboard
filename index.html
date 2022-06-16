@@ -9,18 +9,18 @@
 <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script></head>
 <body class="m-2">
     <header>
-      <h1 class="flex-column">Leaderboard</h1>
+      <h1 class="flex-column header">Leaderboard</h1>
     </header>
       
     <main class="d-flex flex-column flex-column-md justify-content-around p-2 px-md-0">
 
       <section class="card flex-column border p-2 mx-2 my-2 order-2 order-md-1">
         <div class="d-flex justify-content-between">
-          <h2>Recent scores</h2>
+          <h2 class="header">Recent scores</h2>
           <button type="button" class="btn mx-2 p-1 fw-bold refresh">Refresh</button>
         </div>
         <div class="py-1">
-          <ul class="leaderboard">
+          <ul class="leaderboard fw-bold">
            
           </ul>
         </div>
@@ -28,18 +28,18 @@
         
       <section class="card d-flex flex-column border p-2 mx-md-2  auto-height order-1 order-md-2">
         <div>
-          <h2>Add your score</h2>
+          <h2 class="header">Add your score</h2>
         </div>
         <div class="py-1">
           <form>
             <div>
               <label for="user">
-                <input class="input p-1" type="text" name="user" id="user" placeholder="Your name" required/>
+                <input class="input fw-bold p-1" type="text" name="user" id="user" placeholder="Your name" required/>
               </label>
             </div>
             <div class="py-1">
               <label for="score">
-                <input class="input p-1" type="number" name="score" id="score" placeholder="Your score" required/>
+                <input class="input fw-bold p-1" type="number" name="score" id="score" placeholder="Your score" required/>
               </label>
             </div>
             <div class="d-flex justify-content-end py-1">
