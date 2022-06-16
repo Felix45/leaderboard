@@ -11,6 +11,10 @@
   --blue: #182b5c;
   --gray: #ddd;
   --white: #fff;
+  --tomato: tomato;
+  --dodgerblue: dodgerblue;
+  --alert: #d4edda;
+  --darkalert: #155724;
 }
 
 ul,
@@ -25,6 +29,10 @@ ol {
 
 .card {
   width: 100%;
+}
+
+.header {
+  color: var(--dodgerblue);
 }
 
 .fw-bold {
@@ -62,9 +70,9 @@ ol {
 }
 
 .alert {
-  color: #155724;
+  color: var(--dark-alert);
   margin-top: 10px;
-  background-color: #d4edda;
+  background-color: var(--alert);
 }
 
 .input {
@@ -112,8 +120,8 @@ ol {
 }
 
 ul {
-  border-top: 2px solid var(--gray);
-  border-bottom: 2px solid var(--gray);
+  border-top: 4px solid var(--gray);
+  border-bottom: 4px solid var(--gray);
 }
 
 ul li {
@@ -125,8 +133,12 @@ ul li:nth-of-type(2n) {
 }
 
 ul li > span {
-  width: 30%;
+  width: 45%;
   display: inline-block;
+}
+
+ul li span:last-child {
+  color: var(--tomato);
 }
 
 @media screen and (min-width: 767px) {
@@ -156,5 +168,9 @@ ul li > span {
 
   .mx-md-2 {
     margin: 0 0 2em 2em;
+  }
+
+  ul li > span {
+    width: 30%;
   }
 }
