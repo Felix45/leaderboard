@@ -1,12 +1,12 @@
 class LeaderBoard {
   constructor() {
-    this.gameId = 'Y5PURJEgHZgvF0sESt7W';
+    this.gameId = 'QoRmMvoGEZK2cdhRBBsT';
     this.alertBox = document.querySelector('.alert');
     this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   }
 
   createGame = async () => {
-    await fetch(LeaderBoard.url, {
+    await fetch(this.url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
