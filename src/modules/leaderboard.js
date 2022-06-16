@@ -1,12 +1,12 @@
 class LeaderBoard {
   constructor() {
-    this.gameId = 'Y5PURJEgHZgvF0sESt7W';
+    this.gameId = 'QoRmMvoGEZK2cdhRBBsT';
     this.alertBox = document.querySelector('.alert');
     this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   }
 
   createGame = async () => {
-    await fetch(LeaderBoard.url, {
+    await fetch(this.url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ class LeaderBoard {
 
   displayBoard = async (data) => {
     const board = data.reduce((prev, current) => {
-      prev += `<li>${current.user} : ${current.score}</li>`;
+      prev += `<li><span>${current.user}</span> <span>${current.score}</span></li>`;
       return prev;
     }, '');
     document.querySelector('.leaderboard').innerHTML = board;
@@ -27,6 +27,7 @@ class LeaderBoard {
     const scoreUrl = `${this.url + this.gameId}/scores/`;
     await fetch(scoreUrl).then((response) => response.json())
       .then((data) => {
+        data.result.sort((a, b) => b.score - a.score);
         this.displayBoard(data.result);
       });
   }
