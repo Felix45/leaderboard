@@ -59,6 +59,16 @@ ol {
   box-shadow: 5px 5px 5px var(--gray), -5px -5px 5px var(--gray);
 }
 
+.btn:hover {
+  color: var(--blue);
+  background-color: var(--white);
+}
+
+.btn:focus {
+  transform: scale(90%);
+  box-shadow: 3px 3px 3px var(--gray), -3px -3px 3px var(--gray);
+}
+
 .auto-height {
   height: fit-content;
 }
