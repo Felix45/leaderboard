@@ -1,6 +1,6 @@
 class LeaderBoard {
   constructor() {
-    this.gameId = 'QoRmMvoGEZK2cdhRBBsT';
+    this.gameId = 'RWdUsDMW0SSwxk6N4duM';
     this.alertBox = document.querySelector('.alert');
     this.url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
   }
