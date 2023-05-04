@@ -1,10 +1,10 @@
 import './style.css';
 import LeaderBoard from './modules/leaderboard.js';
 
-const refreshBtn = document.querySelector('.refresh');
-const addForm = document.forms[0];
+var refreshBtn = document.querySelector('.refresh');
+var addForm = document.forms[0];
 
-const leaderBoard = new LeaderBoard();
+var leaderBoard = new LeaderBoard();
 leaderBoard.getScores();
 
 refreshBtn.addEventListener('click', leaderBoard.getScores);
