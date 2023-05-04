@@ -151,6 +151,22 @@ ul li span:last-child {
   color: var(--tomato);
 }
 
+/*
+ .btn-primary {
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--blue);
+  border: 1px solid var(--blue);
+  box-shadow: 5px 5px 5px var(--gray), -5px -5px 5px var(--gray);
+}
+
+.btn-primary:focus {
+  transform: scale(90%);
+  box-shadow: 3px 3px 3px var(--gray), -3px -3px 3px var(--gray);
+}
+
+*/
+
 @media screen and (min-width: 767px) {
   .card {
     width: 50%;
